@@ -1,0 +1,53 @@
+package com.semicolon.twittercounter.designSystem
+
+import androidx.compose.ui.graphics.Color
+
+data class TwitterColor(
+    val primary: Color,
+    val primaryLight: Color,
+    val green: Color,
+    val red: Color,
+    val white: Color,
+    val dimGray: Color,
+    val black: Color,
+    val black87: Color,
+    val black60: Color,
+    val black70: Color,
+    val black38: Color,
+    val darkGray: Color,
+    val error: Color,
+    val container: Color,
+    val description: Color,
+    val categoryBack: Color,
+    val transparent: Color,
+    val buttonTextGray: Color,
+    val greyishBrown: Color,
+    val silver: Color,
+    val warmGray: Color,
+    val titleDarkGray: Color,
+)
+
+val LightColors = TwitterColor(
+    primary = Color(0xFF03A9F4),
+    primaryLight = Color(0xFFE6F6FE),
+    green = Color(0xFF00A970),
+    red = Color(0xFFDC0125),
+    white = Color(0xFFFFFFFF),
+    dimGray = Color(0xFF5E6160),
+    black = Color(0xFF000000),
+    black87 = Color(0xDE000000),
+    black60 = Color(0x99000000),
+    black70 = Color(0xB3000000),
+    black38 = Color(0x61000000),
+    titleDarkGray = Color(0xFF1C211F),
+    error = Color(0xFFFF5656),
+    container = Color(0xFFF4EEE7),
+    description = Color(0xFF343434),
+    categoryBack = Color(0xFFe0e9f0),
+    transparent = Color(0x00000000),
+    buttonTextGray = Color(0xFF3B3B3B),
+    greyishBrown = Color(0xFF444444),
+    silver = Color(0xFFC8C7D3),
+    warmGray = Color(0xFF989696),
+    darkGray = Color(0xFF333333),
+)

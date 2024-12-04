@@ -2,4 +2,16 @@
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.jetbrains.kotlin.jvm) apply false
+    alias(libs.plugins.android.library) apply false
+    alias(libs.plugins.androidx.hilt) apply false
+
+}
+buildscript {
+    dependencies {
+        classpath (libs.dagger.hilt.android.gradle.plugin)
+    }
+    repositories {
+        mavenCentral()
+    }
 }

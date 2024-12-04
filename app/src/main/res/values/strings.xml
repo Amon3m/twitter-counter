@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Twitter Counter</string>
+    <string name="twitter_character_count">Twitter character count</string>
+    <string name="copy_text">Copy Text</string>
+    <string name="clear_text">Clear Text</string>
+    <string name="post_tweet">Post tweet</string>
 </resources>

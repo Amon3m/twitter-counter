@@ -1,6 +1,9 @@
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.dagger.hilt.android")
+    kotlin("kapt")
 }
 
 android {
@@ -18,8 +21,11 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
-    }
 
+    }
+    kapt {
+        correctErrorTypes = true
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -50,7 +56,8 @@ android {
 }
 
 dependencies {
-
+    implementation(project(":data"))
+    implementation(project(":domain"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -66,4 +73,22 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    //Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+    kapt(libs.androidx.hilt.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+
+
+    //Coroutine
+    implementation(libs.kotlinx.coroutines.android)
+    testImplementation (libs.kotlinx.coroutines.test)
+    androidTestImplementation (libs.kotlinx.coroutines.test)
+
+    //retrofit
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+    //Logging Interceptor
+    implementation (libs.logging.interceptor)
 }
