@@ -149,7 +149,7 @@ fun CounterScreen(viewModel: TweetViewModel = hiltViewModel()) {
     ExitDialog(context = context, showDialog = showDialog)
 
     LaunchedEffect(tweetState) {
-        if (tweetState.loading.not() && tweetState.tweetUIModel.text != null ) {
+        if (tweetState.tweetUIModel.text?.isNotEmpty() == true) {
             Toast.makeText(context, "Tweet posted successfully", Toast.LENGTH_SHORT).show()
         }
     }

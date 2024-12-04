@@ -27,7 +27,7 @@ class TweetViewModel @Inject constructor(
 
 ) : ViewModel() {
     private val _tweetState: MutableStateFlow<TweetState.Display> =
-        MutableStateFlow(TweetState.Display())
+        MutableStateFlow(TweetState.Display( loading = false))
     val tweetState = _tweetState.asStateFlow()
     private val _errorState: MutableStateFlow<TweetState.Failure> =
         MutableStateFlow(TweetState.Failure())
@@ -55,11 +55,11 @@ class TweetViewModel @Inject constructor(
             useCase(status).onEach { result ->
                 when (result) {
                     is Response.Success -> {
+                        _tweetState.value = TweetState.Display(loading = false)
+
                         val tweet = result.data ?: Tweet()
                         _tweetState.value =
                             TweetState.Display(tweetUIModel = tweet, loading = false)
-                        Log.d("TweetViewModel", "Success: ${result.data}")
-                        _tweetState.value = TweetState.Display(loading = false)
                     }
 
                     is Response.Failure -> {
@@ -89,4 +89,5 @@ class TweetViewModel @Inject constructor(
         _tweetText.value = ""
         _charactersTyped.value = 0
     }
+
 }
