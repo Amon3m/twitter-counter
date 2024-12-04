@@ -91,4 +91,10 @@ dependencies {
     implementation (libs.converter.gson)
     //Logging Interceptor
     implementation (libs.logging.interceptor)
+    // Mocking
+    testImplementation (libs.mockk)
+
+    // Turbine
+    testImplementation (libs.turbine)
+
 }

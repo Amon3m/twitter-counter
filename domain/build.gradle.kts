@@ -11,9 +11,6 @@ java {
 dependencies {
     implementation(libs.kotlinx.coroutines.android)
     testImplementation (libs.kotlinx.coroutines.test)
-//    //Hilt
-//    implementation(libs.hilt.android)
-//    kapt(libs.hilt.android.compiler)
-//    kapt(libs.androidx.hilt.compiler)
+    testImplementation(libs.junit.junit)
 
 }
