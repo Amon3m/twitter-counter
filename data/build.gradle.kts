@@ -64,6 +64,5 @@ dependencies {
     //Logging Interceptor
     implementation (libs.logging.interceptor)
 
-    implementation ("com.github.scribejava:scribejava-apis:8.3.3")
 
 }
