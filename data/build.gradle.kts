@@ -13,9 +13,15 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+        buildConfigField("String", "API_KEY", "\"${project.property("API_KEY")}\"")
+        buildConfigField("String", "API_SECRET_KEY", "\"${project.property("API_SECRET_KEY")}\"")
+        buildConfigField("String", "ACCESS_TOKEN", "\"${project.property("ACCESS_TOKEN")}\"")
+        buildConfigField("String", "ACCESS_TOKEN_SECRET", "\"${project.property("ACCESS_TOKEN_SECRET")}\"")
 
     }
-
+    buildFeatures {
+        buildConfig = true
+    }
     buildTypes {
         release {
             isMinifyEnabled = false

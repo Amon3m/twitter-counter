@@ -2,17 +2,11 @@ package com.semicolon.data.remote
 
 
 
-import android.util.Base64
 import com.github.scribejava.apis.TwitterApi
 import com.github.scribejava.core.builder.ServiceBuilder
 import com.github.scribejava.core.model.OAuth1AccessToken
-import okhttp3.HttpUrl
 import okhttp3.Interceptor
 import okhttp3.Response
-import java.net.URLEncoder
-import java.util.UUID
-import javax.crypto.Mac
-import javax.crypto.spec.SecretKeySpec
 import javax.inject.Inject
 
 

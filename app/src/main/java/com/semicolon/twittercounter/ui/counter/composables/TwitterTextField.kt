@@ -19,10 +19,14 @@ import com.semicolon.A.ui.theme.Theme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TwitterTextField(modifier: Modifier = Modifier) {
+fun TwitterTextField(
+    text: String,
+    onTextChange: (String) -> Unit,
+    modifier: Modifier = Modifier
+) {
     TextField(
-        value = "",
-        onValueChange = {},
+        value = text,
+        onValueChange = onTextChange,
         placeholder = {
             Text(text = "Start typing! You can enter up to 280 characters")
         },
@@ -48,5 +52,5 @@ fun TwitterTextField(modifier: Modifier = Modifier) {
 @Composable
 @Preview(showBackground = true)
 private fun TwitterTextFieldPreview() {
-    TwitterTextField()
+    TwitterTextField( text = "", onTextChange = {})
 }

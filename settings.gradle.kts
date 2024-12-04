@@ -23,4 +23,3 @@ rootProject.name = "Twitter Counter"
 include(":app")
 include(":domain")
 include(":data")
-include(":di")
